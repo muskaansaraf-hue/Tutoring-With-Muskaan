@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { Menu, X, BookOpen, Users, Calendar, User, Mail, Star, Clock, CheckCircle } from 'lucide-react'
+import { Menu, X, BookOpen, User, Mail, Star, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { BookingSection } from '@/components/BookingSection'
+import { env } from '@/config/env'
 import './App.css'
 
 function App() {
@@ -241,44 +243,7 @@ function App() {
         </div>
       </section>
 
-      {/* Book a Session Section */}
-      <section id="booking" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-16">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Book a Session</h3>
-            <p className="text-xl text-gray-600 mb-8">
-              Schedule your 30-minute homework help session today
-            </p>
-            <div className="flex items-center justify-center space-x-6 text-gray-600 mb-8">
-              <div className="flex items-center space-x-2">
-                <Clock className="h-5 w-5" />
-                <span>30 minutes</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5" />
-                <span>1-on-1 tutoring</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5" />
-                <span>Flexible scheduling</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Calendly Embed */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <Calendar className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-4">Calendly booking widget will be embedded here</p>
-                <p className="text-sm text-gray-500">
-                  To integrate your Calendly link, replace this placeholder with your actual Calendly embed code
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BookingSection />
 
       {/* About Muskaan Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -387,7 +352,7 @@ function App() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Mail className="h-4 w-4" />
-                  <span>muskaan.tutoring@email.com</span>
+                  <span>{env.contact.email}</span>
                 </div>
               </div>
             </div>
