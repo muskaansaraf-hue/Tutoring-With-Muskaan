@@ -257,15 +257,16 @@ function App() {
             <div className="order-2 lg:order-1">
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Hi! I'm Muskaan, and I'm passionate about helping students discover their potential in mathematics. 
-                  With years of experience tutoring middle and high school students, I believe that every student 
-                  can succeed with the right guidance and support.
+                  Hi! I'm Muskaan, a junior in high school who is incredibly enthusiastic about helping kids develop 
+                  their math skills. I'm passionate about helping students discover their potential in mathematics and 
+                  believe that every student can succeed with the right guidance and support.
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  My teaching style focuses on patience, clarity, and building confidence. I work with each student 
-                  to identify their unique learning style and adapt my approach accordingly. Whether you're struggling 
-                  with basic concepts or looking to excel in advanced topics, I'm here to help you achieve your goals.
+                  My teaching style focuses on patience, clarity, and building confidence. As someone who understands 
+                  the challenges of being a student, I work with each student to identify their unique learning style 
+                  and adapt my approach accordingly. Whether you're struggling with basic concepts or looking to excel 
+                  in advanced topics, I'm here to help you achieve your goals.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
