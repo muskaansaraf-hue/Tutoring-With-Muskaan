@@ -258,15 +258,10 @@ function App() {
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Hi! I'm Muskaan, a junior in high school who is incredibly enthusiastic about helping kids develop 
-                  their math skills. I'm passionate about helping students discover their potential in mathematics and 
-                  believe that every student can succeed with the right guidance and support.
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  My teaching style focuses on patience, clarity, and building confidence. As someone who understands 
-                  the challenges of being a student, I work with each student to identify their unique learning style 
-                  and adapt my approach accordingly. Whether you're struggling with basic concepts or looking to excel 
-                  in advanced topics, I'm here to help you achieve your goals.
+                  their math skills. As someone who understands the challenges of being a student, my teaching style 
+                  focuses on patience, clarity, and building confidence. I work with each student to identify their 
+                  unique learning style and adapt my approach accordingly, believing that every student can succeed 
+                  with the right guidance and support.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-4 mt-8">
