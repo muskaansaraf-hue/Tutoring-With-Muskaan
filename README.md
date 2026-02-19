@@ -1,6 +1,8 @@
 # STEM Pathways
 
-A modern, responsive website for a student-led STEM career pathway nonprofit, built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for a student-led STEM career pathway nonprofit, built with Vite, React Router, TypeScript, and Tailwind CSS.
+
+**Live site:** [https://stem-career-pathway-app-kjk4xa4a.devinapps.com](https://stem-career-pathway-app-kjk4xa4a.devinapps.com)
 
 ## Getting Started
 
@@ -15,7 +17,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Build for Production
 
@@ -23,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 npm run build
 ```
 
-The static export will be in the `out/` directory.
+The static build will be in the `dist/` directory. Deploy it to any static hosting provider.
 
 ---
 
@@ -105,23 +107,28 @@ Edit `src/content/recordings.ts`:
 
 ```
 src/
-  app/              # Next.js App Router pages
-    page.tsx        # Home
-    about/          # About page
-    team/           # Meet Our Team page
-    teams/          # Teams & Opportunities page
-    recordings/     # Recordings library page
-    projects/       # Projects Showcase page
-    signup/         # Sign Up + FAQ page
-    contact/        # Contact page
-  components/       # Shared React components
+  pages/            # Page components (one per route)
+    Home.tsx        # Home page
+    About.tsx       # About page
+    Team.tsx        # Meet Our Team page
+    Teams.tsx       # Teams & Opportunities page
+    Recordings.tsx  # Recordings library page
+    Projects.tsx    # Projects Showcase page
+    SignUp.tsx      # Sign Up + FAQ page
+    Contact.tsx     # Contact page
+  components/       # Shared React components (Navbar, Footer, ImpactChart)
   content/          # Editable data (team, projects, recordings)
   lib/              # Utilities and site config
+  App.tsx           # Route definitions
+  main.tsx          # Entry point with HashRouter
+index.html          # Vite entry HTML
+vite.config.ts      # Vite configuration
 ```
 
 ## Tech Stack
 
-- **Next.js 14** (App Router, static export)
+- **Vite** (build tool)
+- **React 18** with **React Router** (HashRouter for static hosting)
 - **TypeScript**
 - **Tailwind CSS**
 - **Recharts** (data visualization)
