@@ -1,50 +1,128 @@
-# React + TypeScript + Vite
+# STEM Pathways
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for a student-led STEM career pathway nonprofit, built with Next.js, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 18+ and npm
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Run Locally
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Build for Production
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run build
 ```
+
+The static export will be in the `out/` directory.
+
+---
+
+## How to Edit Content
+
+### Change the Organization Name
+
+Edit `src/lib/config.ts`:
+
+```ts
+export const siteConfig = {
+  name: "Your Organization Name",
+  tagline: "Your tagline here",
+  // ...
+};
+```
+
+The name and tagline propagate automatically across the entire site (navbar, footer, hero, metadata, etc.).
+
+### Edit Team Members
+
+Edit `src/content/team.ts`:
+
+- **Add a leader**: Add an object to the `teamMembers` array with `role: "co-founder"` or `role: "head-pr"`.
+- **Add a member**: Add an object with `role: "member"` and set `team` to `"data-tech"`, `"research"`, or `"outreach"`.
+
+```ts
+{
+  id: "unique-id",
+  name: "Full Name",
+  title: "Role Title",
+  bio: "Optional bio for leaders",
+  team: "data-tech",       // "data-tech" | "research" | "outreach" | "leadership"
+  role: "member",           // "co-founder" | "head-pr" | "member"
+  linkedin: "https://linkedin.com/in/...",
+}
+```
+
+### Add New Projects
+
+Edit `src/content/projects.ts`:
+
+```ts
+{
+  id: "unique-slug",
+  title: "Project Title",
+  category: "data",          // "data" | "research" | "outreach"
+  description: "Short description",
+  problem: "Problem statement",
+  approach: "How the team approached it",
+  tools: ["Python", "React"],
+  contributors: ["Name 1", "Name 2"],
+  outcomes: ["Outcome 1", "Outcome 2"],
+  github: "https://github.com/...",  // optional
+}
+```
+
+### Add New Recordings
+
+Edit `src/content/recordings.ts`:
+
+```ts
+{
+  id: "unique-slug",
+  title: "Session Title",
+  speaker: "Speaker Name",
+  speakerTitle: "Their Professional Title",
+  field: "tech",              // "medicine" | "engineering" | "tech" | "research"
+  description: "Session description",
+  takeaways: ["Takeaway 1", "Takeaway 2"],
+  date: "2025-12-01",
+  duration: "45 min",
+}
+```
+
+---
+
+## Project Structure
+
+```
+src/
+  app/              # Next.js App Router pages
+    page.tsx        # Home
+    about/          # About page
+    team/           # Meet Our Team page
+    teams/          # Teams & Opportunities page
+    recordings/     # Recordings library page
+    projects/       # Projects Showcase page
+    signup/         # Sign Up + FAQ page
+    contact/        # Contact page
+  components/       # Shared React components
+  content/          # Editable data (team, projects, recordings)
+  lib/              # Utilities and site config
+```
+
+## Tech Stack
+
+- **Next.js 14** (App Router, static export)
+- **TypeScript**
+- **Tailwind CSS**
+- **Recharts** (data visualization)
+- **Lucide React** (icons)
