@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Linkedin, User } from "lucide-react";
 import { teamMembers, type TeamMember } from "@/content/team";
@@ -81,7 +79,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Leadership */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-12">
@@ -95,7 +92,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Members */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">

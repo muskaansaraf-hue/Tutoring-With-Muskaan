@@ -1,10 +1,6 @@
 import { siteConfig } from "@/lib/config";
 import { Mail, MapPin, MessageSquare, Send } from "lucide-react";
 
-export const metadata = {
-  title: "Contact",
-};
-
 export default function ContactPage() {
   return (
     <>
@@ -99,7 +95,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-8">
                 Send a Message
               </h2>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
                   <label
                     htmlFor="name"

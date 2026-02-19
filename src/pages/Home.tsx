@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { siteConfig } from "@/lib/config";
 import {
   Code2,
@@ -22,7 +22,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
       <section className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE4YzEuNjU3IDAgMy0xLjM0MyAzLTNzLTEuMzQzLTMtMy0zLTMgMS4zNDMtMyAzIDEuMzQzIDMgMyAzem0wIDM2YzEuNjU3IDAgMy0xLjM0MyAzLTNzLTEuMzQzLTMtMy0zLTMgMS4zNDMtMyAzIDEuMzQzIDMgMyAzeiIvPjwvZz48L2c+PC9zdmc+')] opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
@@ -35,14 +34,14 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
-                href="/teams"
+                to="/teams"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-900 font-semibold rounded-lg hover:bg-primary-50 transition-colors"
               >
                 Explore Teams
                 <Compass size={18} />
               </Link>
               <Link
-                href="/signup"
+                to="/signup"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-400 transition-colors border border-primary-400"
               >
                 Join Now
@@ -53,7 +52,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What We Do */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -100,7 +98,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -155,7 +152,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Projects */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
@@ -168,7 +164,7 @@ export default function HomePage() {
               </p>
             </div>
             <Link
-              href="/projects"
+              to="/projects"
               className="hidden sm:flex items-center gap-1 text-primary-600 font-medium hover:text-primary-700 transition-colors"
             >
               View All <ArrowRight size={16} />
@@ -209,7 +205,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center sm:hidden">
             <Link
-              href="/projects"
+              to="/projects"
               className="inline-flex items-center gap-1 text-primary-600 font-medium"
             >
               View All Projects <ArrowRight size={16} />
@@ -218,7 +214,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Professional Sessions */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
@@ -231,7 +226,7 @@ export default function HomePage() {
               </p>
             </div>
             <Link
-              href="/recordings"
+              to="/recordings"
               className="hidden sm:flex items-center gap-1 text-primary-600 font-medium hover:text-primary-700 transition-colors"
             >
               View All <ArrowRight size={16} />
@@ -265,7 +260,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center sm:hidden">
             <Link
-              href="/recordings"
+              to="/recordings"
               className="inline-flex items-center gap-1 text-primary-600 font-medium"
             >
               View All Recordings <ArrowRight size={16} />
@@ -274,7 +269,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Impact Metrics */}
       <section className="py-20 bg-primary-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -308,7 +302,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
@@ -320,13 +313,13 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/signup"
+              to="/signup"
               className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
             >
               Get Started <ArrowRight size={18} />
             </Link>
             <Link
-              href="/teams"
+              to="/teams"
               className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-primary-300 hover:text-primary-700 transition-colors"
             >
               Learn More <ExternalLink size={18} />

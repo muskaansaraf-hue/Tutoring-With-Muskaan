@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { siteConfig } from "@/lib/config";
 
 export function Footer() {
@@ -24,22 +24,22 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
+                <Link to="/about" className="hover:text-white transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/teams" className="hover:text-white transition-colors">
+                <Link to="/teams" className="hover:text-white transition-colors">
                   Teams & Opportunities
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-white transition-colors">
+                <Link to="/projects" className="hover:text-white transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/signup" className="hover:text-white transition-colors">
+                <Link to="/signup" className="hover:text-white transition-colors">
                   Sign Up
                 </Link>
               </li>
@@ -65,7 +65,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link to="/contact" className="hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>

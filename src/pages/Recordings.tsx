@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Play, Clock, Calendar, User } from "lucide-react";
 import { recordings, type Recording } from "@/content/recordings";

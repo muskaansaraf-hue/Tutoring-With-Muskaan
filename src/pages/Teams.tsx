@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import {
   Code2,
   BookOpen,
@@ -18,10 +18,6 @@ import {
   Share2,
   ArrowRight,
 } from "lucide-react";
-
-export const metadata = {
-  title: "Teams & Opportunities",
-};
 
 interface TeamSectionProps {
   id: string;
@@ -99,7 +95,7 @@ function TeamSection({
 
           <div className="mt-10">
             <Link
-              href={ctaHref}
+              to={ctaHref}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors"
             >
               {ctaText} <ArrowRight size={18} />

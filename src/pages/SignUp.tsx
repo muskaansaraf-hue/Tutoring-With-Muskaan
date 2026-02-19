@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 import {
   Code2,
@@ -10,10 +9,6 @@ import {
   ArrowRight,
   ChevronDown,
 } from "lucide-react";
-
-export const metadata = {
-  title: "Sign Up",
-};
 
 interface PathwayProps {
   icon: React.ReactNode;

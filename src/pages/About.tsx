@@ -1,10 +1,6 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { siteConfig } from "@/lib/config";
 import { Target, Eye, Heart, ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "About",
-};
 
 export default function AboutPage() {
   return (
@@ -142,7 +138,7 @@ export default function AboutPage() {
             there is a place for you here.
           </p>
           <Link
-            href="/signup"
+            to="/signup"
             className="mt-8 inline-flex items-center gap-2 px-8 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-colors"
           >
             Join {siteConfig.name} <ArrowRight size={18} />
