@@ -84,7 +84,7 @@ export default function TeamPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12">
             Leadership
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {leaders.map((member) => (
               <LeaderCard key={member.id} member={member} />
             ))}
