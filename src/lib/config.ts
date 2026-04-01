@@ -6,8 +6,9 @@ export const siteConfig = {
   url: "https://stempathways.org",
   links: {
     twitter: "#",
-    instagram: "#",
+    instagram: "https://instagram.com/stemscholars.project",
+    instagramHandle: "stemscholars.project",
     linkedin: "#",
-    email: "contact@stempathways.org",
+    email: "muskaan.saraf@gmail.com",
   },
 };

@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import { Mail, MapPin, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, Instagram } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -40,40 +40,18 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="text-primary-600" size={20} />
+                    <Instagram className="text-primary-600" size={20} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900">
-                      Social Media
+                      Instagram
                     </h3>
-                    <p className="text-slate-600 text-sm">
-                      Follow us on{" "}
-                      <a
-                        href={siteConfig.links.instagram}
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        Instagram
-                      </a>{" "}
-                      and{" "}
-                      <a
-                        href={siteConfig.links.linkedin}
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        LinkedIn
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-primary-600" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900">Location</h3>
-                    <p className="text-slate-600 text-sm">
-                      Virtual organization — we work with students nationwide.
-                    </p>
+                    <a
+                      href={siteConfig.links.instagram}
+                      className="text-primary-600 hover:text-primary-700 text-sm"
+                    >
+                      @{siteConfig.links.instagramHandle}
+                    </a>
                   </div>
                 </div>
               </div>

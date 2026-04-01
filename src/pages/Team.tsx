@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Linkedin, User } from "lucide-react";
+import { User } from "lucide-react";
 import { teamMembers, type TeamMember } from "@/content/team";
 
 const teamFilters = [
   { value: "all", label: "All Members" },
-  { value: "data-tech", label: "Data & Technology" },
-  { value: "research", label: "Research" },
-  { value: "outreach", label: "Outreach" },
+  { value: "research", label: "Research & Scientific Writing" },
+  { value: "outreach", label: "Public Outreach & Education" },
 ];
 
 function LeaderCard({ member }: { member: TeamMember }) {
@@ -21,14 +20,6 @@ function LeaderCard({ member }: { member: TeamMember }) {
         {member.bio && (
           <p className="mt-4 text-slate-600 text-sm">{member.bio}</p>
         )}
-        {member.linkedin && (
-          <a
-            href={member.linkedin}
-            className="mt-4 inline-flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 font-medium"
-          >
-            <Linkedin size={16} /> LinkedIn Profile
-          </a>
-        )}
       </div>
     </div>
   );
@@ -36,9 +27,8 @@ function LeaderCard({ member }: { member: TeamMember }) {
 
 function MemberCard({ member }: { member: TeamMember }) {
   const teamLabels: Record<string, string> = {
-    "data-tech": "Data & Tech",
-    research: "Research",
-    outreach: "Outreach",
+    research: "Research & Scientific Writing",
+    outreach: "Public Outreach & Education",
   };
 
   return (

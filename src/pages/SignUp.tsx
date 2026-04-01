@@ -102,7 +102,7 @@ export default function SignUpPage() {
               description="Build coding projects, data dashboards, and beginner AI models. Perfect for students interested in computer science and data."
               commitment="3-5 hours/week"
               color="bg-blue-100"
-              formLink="#google-form-data-tech"
+              formLink="https://docs.google.com/forms/d/1RJLgeirIxErTyXEmyjK_9sqcHuuCqG0iU1J4CXRvdJ0/edit"
             />
             <PathwayCard
               icon={<BookOpen className="text-emerald-600" size={24} />}
@@ -110,7 +110,7 @@ export default function SignUpPage() {
               description="Learn to read scientific papers and write structured research. Great for students interested in science, medicine, or academia."
               commitment="3-5 hours/week"
               color="bg-emerald-100"
-              formLink="#google-form-research"
+              formLink="https://docs.google.com/forms/d/1RJLgeirIxErTyXEmyjK_9sqcHuuCqG0iU1J4CXRvdJ0/edit"
             />
             <PathwayCard
               icon={<Megaphone className="text-purple-600" size={24} />}
@@ -118,7 +118,7 @@ export default function SignUpPage() {
               description="Connect with working professionals, coordinate speaker sessions, and manage communications. Ideal for outgoing students."
               commitment="3-4 hours/week"
               color="bg-purple-100"
-              formLink="#google-form-outreach"
+              formLink="https://docs.google.com/forms/d/1RJLgeirIxErTyXEmyjK_9sqcHuuCqG0iU1J4CXRvdJ0/edit"
             />
             <PathwayCard
               icon={<Play className="text-orange-600" size={24} />}
@@ -126,7 +126,7 @@ export default function SignUpPage() {
               description="Join a live session with a working STEM professional. Open to anyone — no team membership required."
               commitment="1 hour per session"
               color="bg-orange-100"
-              formLink="#google-form-session"
+              formLink="https://docs.google.com/forms/d/1RJLgeirIxErTyXEmyjK_9sqcHuuCqG0iU1J4CXRvdJ0/edit"
             />
             <PathwayCard
               icon={<FolderGit2 className="text-rose-600" size={24} />}
@@ -134,7 +134,7 @@ export default function SignUpPage() {
               description="Have a STEM project you'd like featured? Submit it for review and potential inclusion in our showcase."
               commitment="One-time submission"
               color="bg-rose-100"
-              formLink="#google-form-project"
+              formLink="https://docs.google.com/forms/d/1RJLgeirIxErTyXEmyjK_9sqcHuuCqG0iU1J4CXRvdJ0/edit"
             />
           </div>
         </div>

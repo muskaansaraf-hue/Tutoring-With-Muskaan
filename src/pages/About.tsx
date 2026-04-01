@@ -11,9 +11,8 @@ export default function AboutPage() {
             About {siteConfig.name}
           </h1>
           <p className="mt-6 text-lg text-primary-200 max-w-2xl">
-            We are a student-led nonprofit dedicated to empowering high school
-            students with real STEM experience — through projects, research, and
-            professional connections.
+            A student-led initiative helping students explore STEM in a
+            meaningful and hands-on way.
           </p>
         </div>
       </section>
@@ -23,26 +22,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Our Story
+                Who We Are
               </h2>
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                 <p>
-                  {siteConfig.name} was founded by a group of ambitious high
-                  school students who recognized a critical gap: while schools
-                  teach STEM subjects, they rarely give students the chance to
-                  apply those skills in real-world settings.
+                  STEM Scholars Project is a student-led initiative created to
+                  help students explore STEM in a more meaningful and hands-on
+                  way. Through research, coding projects, outreach, and
+                  professional connections, we aim to give students the
+                  opportunity to learn, create, and grow within the STEM
+                  community.
                 </p>
                 <p>
-                  We built this organization to change that. Through structured
-                  project work, scientific research, and direct access to working
-                  professionals, our members gain the experience, skills, and
-                  confidence they need to pursue STEM careers.
-                </p>
-                <p>
-                  Every project our members complete, every research paper they
-                  write, and every professional they connect with brings them one
-                  step closer to their goals — and makes their college
-                  applications and resumes stand out.
+                  Our goal is to make STEM more accessible, collaborative, and
+                  inspiring for students who want to pursue it further.
                 </p>
               </div>
             </div>
@@ -70,17 +63,17 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Our Mission",
-                desc: "To provide every high school student with meaningful, hands-on STEM experience — regardless of their school, background, or resources.",
+                desc: "To give every student the opportunity to explore STEM through real projects, research, and professional connections — regardless of background or resources.",
               },
               {
                 icon: Eye,
                 title: "Our Vision",
-                desc: "A future where every student who wants to pursue a STEM career has the projects, mentors, and experience to get there.",
+                desc: "A future where every student interested in STEM has the hands-on experience, mentorship, and community to help them get there.",
               },
               {
                 icon: Heart,
                 title: "Our Values",
-                desc: "Accessibility, excellence, collaboration, and authenticity. We believe in learning by doing and growing together as a community.",
+                desc: "Accessibility, collaboration, and authenticity. We believe in learning by doing and growing together as a community.",
               },
             ].map((item) => (
               <div
@@ -94,34 +87,6 @@ export default function AboutPage() {
                   {item.title}
                 </h3>
                 <p className="text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-              What Makes Us Different
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              "100% student-led — by students, for students",
-              "Real projects that build real skills and portfolios",
-              "Direct access to working STEM professionals",
-              "Structured programs with mentorship and guidance",
-              "Research writing training with academic rigor",
-              "A supportive community of ambitious peers",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl"
-              >
-                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0" />
-                <span className="text-slate-700 font-medium">{item}</span>
               </div>
             ))}
           </div>
